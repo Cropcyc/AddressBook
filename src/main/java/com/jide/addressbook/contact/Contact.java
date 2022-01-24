@@ -23,10 +23,19 @@ public class Contact {
 
     }
 
-    public Contact(String name, String phone, String email) {
+    public Contact(Long id, String name, String phone, String email) {
+        this.id = id;
         this.name = name;
         this.phone = phone;
         this.email = email;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setName(String name) {

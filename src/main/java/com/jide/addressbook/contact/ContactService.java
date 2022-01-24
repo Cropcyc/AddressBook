@@ -26,4 +26,20 @@ public class ContactService {
     public Optional<Contact> getContactByName(String name) {
         return contactRepository.findContactByName(name);
     }
+
+    public void updateContact(Long id, Contact contact) {
+        Optional<Contact> c = contactRepository.findById(id);
+
+        if (c.isPresent()) {
+            contactRepository.save(contact);
+        }
+    }
+
+    public void removeContactById(Long id) {
+        contactRepository.deleteById(id);
+    }
+
+    public void removeAllContacts() {
+        contactRepository.deleteAll();
+    }
 }
