@@ -24,5 +24,5 @@ public class AddressbookApplication {
 				.apis(RequestHandlerSelectors.any())
 				.paths(PathSelectors.any()).build();
 	}
-
 }
+// tweak
